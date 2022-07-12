@@ -33,9 +33,10 @@ class Telenotify:
             update.message.reply_text('Already Started.')
 
     def send_result(self, res):
-        logger.info(res)
-        for id, _ in self.chat_list.items():
-            self.updater.bot.send_message(id, text=res)
+        if len(res) > 0:
+            logger.info(res)
+            for id, _ in self.chat_list.items():
+                self.updater.bot.send_message(id, text=res)
 
     def _fetch(self):
         self.send_result(self.get_update())
