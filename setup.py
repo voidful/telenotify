@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='telenotify',
-    version='0.0.2',
+    version='0.0.3',
     description='bot that send telegram notify message',
     url='https://github.com/voidful/telenotify',
     author='Voidful',
